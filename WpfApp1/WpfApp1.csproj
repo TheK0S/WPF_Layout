@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pictures\**" />
+    <EmbeddedResource Remove="Pictures\**" />
+    <None Remove="Pictures\**" />
+    <Page Remove="Pictures\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="1_Nature_1.png" />
+    <None Remove="3dot.png" />
+    <None Remove="calendar-4-32.png" />
+    <None Remove="check-mark-32.png" />
+    <None Remove="down.png" />
+    <None Remove="gear-2-32.png" />
+    <None Remove="menu32.png" />
+    <None Remove="message-outline-32.png" />
+    <None Remove="plus-8-32.png" />
+    <None Remove="up.png" />
+    <None Remove="user-5-32.png" />
+    <None Remove="window-add-32.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1_Nature_1.png" />
+    <Resource Include="3dot.png" />
+    <Resource Include="calendar-4-32.png" />
+    <Resource Include="check-mark-32.png" />
+    <Resource Include="down.png" />
+    <Resource Include="gear-2-32.png" />
+    <Resource Include="menu32.png" />
+    <Resource Include="message-outline-32.png" />
+    <Resource Include="plus-8-32.png" />
+    <Resource Include="up.png" />
+    <Resource Include="user-5-32.png" />
+    <Resource Include="window-add-32.png" />
+  </ItemGroup>
+
+</Project>

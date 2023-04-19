@@ -1,0 +1,366 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Календарь" Height="500" Width="1000">
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DockPanel Name="leftMenu" Grid.Column ="0" Grid.Row="0" Grid.RowSpan="13" Grid.ColumnSpan="2">
+            <DockPanel.Background>
+                <ImageBrush  ImageSource="/1_Nature_1.png" Stretch="UniformToFill"/>
+            </DockPanel.Background>
+            
+            <DockPanel Background="#7F0000C5">
+                <StackPanel DockPanel.Dock="top" Margin="10,0,10,0">
+                    <Image Height="25" Width="25" Source="/menu32.png" HorizontalAlignment="Left" Margin="0,5,0,10" Name="mainMenu" MouseEnter="MenuImage_MouseEnter" MouseLeave="MenuImage_MouseLeave"/>
+                    <DockPanel Height="30">
+                        <Image DockPanel.Dock="Left" Width="25" Margin="0,0,15,0" Source="/plus-8-32.png" Name="addEvent"/>
+                        <Label DockPanel.Dock="Right" Content="Создать событие" Foreground="White" FontWeight="DemiBold" FontSize="15"/>
+                    </DockPanel>
+
+                    <DockPanel Height="30">
+                        <Label DockPanel.Dock="Left" Content="апрель 2023 г." Foreground="White" FontSize="14"/>
+                    </DockPanel>
+                    
+                    <UniformGrid Rows="7" Columns="7" >
+                        <Label Content="пн" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="вт" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="ср" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="чт" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="пт" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="сб" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="вс" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="10" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="11" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="12" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="13" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="14" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="15" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="16" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="17" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="18" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="19" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="20" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="21" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="22" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="23" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="24" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="25" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="26" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="27" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="28" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="29" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="30" Background="#FF0D0DA5" Foreground="White" HorizontalContentAlignment="Center"/>
+                        <Label Content="1" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="2" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="3" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="4" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="5" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="6" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="7" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="8" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="9" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="10" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="11" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="12" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="13" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="14" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="15" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="16" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="17" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="18" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="19" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="20" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                        <Label Content="21" Foreground="DarkGray" HorizontalContentAlignment="Center"/>
+                    </UniformGrid>
+                    <DockPanel Height="30" Margin="10,10,10,5">
+                        <Image Width="30"/>
+                        <Label Content="учетная запись Майкрософт" Foreground="White" FontSize="15"/>
+                    </DockPanel>
+                    <CheckBox Height="30" Content="Календарь" FontSize="15" Foreground="White" VerticalContentAlignment="Center" Margin="20,0,0,0" IsChecked="True"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
+                    <WrapPanel Height="auto"/>
+                    <DockPanel Height="30" Margin="10,0,10,0">
+                        <Image DockPanel.Dock="Left" Width="30" Source="/window-add-32.png"/>
+                        <Label DockPanel.Dock="Right" Content="Добавить календари" Foreground="White" FontSize="15"/>
+                    </DockPanel>
+                    <Grid Margin="10,10,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Height="30" Width="30" Source="/message-outline-32.png" Stretch="Fill"/>
+                        <Image Grid.Column="1" Height="30" Width="30" Source="/calendar-4-32.png"/>
+                        <Image Grid.Column="2" Height="30" Width="30" Source="/user-5-32.png"/>
+                        <Image Grid.Column="3" Height="30" Width="30" Source="/check-mark-32.png"/>
+                        <DockPanel Grid.Column="4" HorizontalAlignment="Right">
+                            <Image DockPanel.Dock="Right" Height="30" Width="30" Source="/gear-2-32.png"/>
+                        </DockPanel>
+                        
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+        
+        <DockPanel Name="headerMenu" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="7">
+            <WrapPanel DockPanel.Dock="Left">
+                <Label Width="5"/>
+                <Image Width="20" Height="30" Stretch="Fill" Source="/up.png"/>
+                <Label Width="10"/>
+                <Image Width="20" Height="30" Stretch="Fill" Source="/down.png"/>
+                <Label Content="апрель 2023 г." Foreground="DarkBlue" FontSize="18" Margin="5,0,5,0" VerticalAlignment="Center"/>
+            </WrapPanel>
+
+            <WrapPanel DockPanel.Dock="Right" HorizontalAlignment="Right">
+                <Image Width="30" Height="30" Source="/today.png"/>
+                <Label Content="Сегодня" Background="White" Margin="0,0,5,0"/>
+                <Label Background="DarkGray" Width="1"/>
+                
+                <Image Width="30" Height="30" Source="/day.png"/>
+                <Label Content="День" Background="White" Margin="0,0,5,0"/>
+                
+                <Image Width="30" Height="30" Source="/week.png"/>
+                <Label Content="Неделя" Background="White" Margin="0,0,5,0"/>
+
+                <Image Width="30" Height="30" Source="/month.png"/>
+                <Label Content="Месяц" Background="White" Margin="0,0,5,0"/>
+
+                <Image Width="30" Height="30" Source="/year.png"/>
+                <Label Content="Год" Background="White" Margin="0,0,5,0"/>
+                
+                <Image Width="30" Height="30" Source="/3dot.png"/>
+            </WrapPanel>                      
+            
+        </DockPanel>
+        <WrapPanel Name="line1" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="7" Background="#FFE8E8E8" ></WrapPanel>
+        <WrapPanel Name="line2" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="7" Background="#FFE8E8E8" ></WrapPanel>
+        <WrapPanel Name="line3" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="7" Background="#FFE8E8E8" ></WrapPanel>
+        <WrapPanel Name="line4" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="7" Background="#FFE8E8E8" ></WrapPanel>
+        <WrapPanel Name="line5" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="7" Background="#FFE8E8E8" ></WrapPanel>
+
+        
+        <Label Grid.Row="1" Grid.Column="2" Content="понедельник" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Grid.Row="1" Grid.Column="3" Content="вторник" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Grid.Row="1" Grid.Column="4" Content="среда" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Grid.Row="1" Grid.Column="5" Content="четверг" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Grid.Row="1" Grid.Column="6" Content="пятница" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Grid.Row="1" Grid.Column="7" Content="суббота" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Grid.Row="1" Grid.Column="8" Content="воскресенье" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+
+        <DockPanel Grid.Row="3" Grid.Column="2">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="10.04" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+        
+        <DockPanel Grid.Row="3" Grid.Column="3">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="11" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="3" Grid.Column="4">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="12" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="3" Grid.Column="5">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="13" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="3" Grid.Column="6">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="14" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="3" Grid.Column="7">
+            <WrapPanel DockPanel.Dock="Top" Height="5" Background="DarkBlue"></WrapPanel>
+            <Label Content="15" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="DarkBlue"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="3" Grid.Column="8">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="16" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        
+        
+        <DockPanel Grid.Row="5" Grid.Column="2">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="17" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" Grid.Column="3">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="18" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" Grid.Column="4">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="19" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" Grid.Column="5">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="20" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" Grid.Column="6">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="21" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" Grid.Column="7">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="22" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" Grid.Column="8">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="23" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </DockPanel>
+
+
+        <DockPanel Grid.Row="7" Grid.Column="2">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="7" Grid.Column="3">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="25" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="7" Grid.Column="4">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="26" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="7" Grid.Column="5">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="27" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="7" Grid.Column="6">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="28" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="7" Grid.Column="7">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="29" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="7" Grid.Column="8">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="30" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+
+        <DockPanel Grid.Row="9" Grid.Column="2">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="01.05" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="9" Grid.Column="3">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="2" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="9" Grid.Column="4">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="3" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="9" Grid.Column="5">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="4" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="9" Grid.Column="6">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="5" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="9" Grid.Column="7">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="6" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="9" Grid.Column="8">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="7" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        
+
+        <DockPanel Grid.Row="11" Grid.Column="2">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="8" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="11" Grid.Column="3">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="9" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="11" Grid.Column="4">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="10" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="11" Grid.Column="5">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="11" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="11" Grid.Column="6">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="12" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="11" Grid.Column="7">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="13" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+        <DockPanel Grid.Row="11" Grid.Column="8">
+            <WrapPanel DockPanel.Dock="Top" Height="5"></WrapPanel>
+            <Label Content="14" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        </DockPanel>
+
+    </Grid>
+</Window>
